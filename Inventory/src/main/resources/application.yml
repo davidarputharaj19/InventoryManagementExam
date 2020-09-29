@@ -1,0 +1,25 @@
+server:
+  port: 9090
+  error:
+    whitelabel:
+      enabled: false
+spring:
+  h2:
+    console:
+      enabled: false
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    database: h2    
+management:
+  endpoints:
+    web:
+      base-path: /manage
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+      
